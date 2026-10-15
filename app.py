@@ -51,7 +51,7 @@ def fetch_poster(suggestion):
             poster_urls.append(None)
         else:
             poster_urls.append(
-                matched_books.iloc[0]["image_url"]
+                matched_books.iloc[0]["img_url"]
             )
 
     return poster_urls
@@ -91,7 +91,7 @@ def recommend_book(selected_book, n_recommendations=5):
         poster_url = None
 
         if not matched_books.empty:
-            poster_url = matched_books.iloc[0]["image_url"]
+            poster_url = matched_books.iloc[0]["img_url"]
 
         # Avoid duplicate titles
         if title not in recommended_books:
