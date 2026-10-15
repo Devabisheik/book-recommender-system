@@ -44,7 +44,7 @@ def fetch_poster(suggestion):
 
         # Find matching book details
         matched_books = final_rating[
-            final_rating["title"] == title
+            final_rating["Title"] == title
         ]
 
         if matched_books.empty:
@@ -85,7 +85,7 @@ def recommend_book(selected_book, n_recommendations=5):
             continue
 
         matched_books = final_rating[
-            final_rating["title"] == title
+            final_rating["Title"] == title
         ]
 
         poster_url = None
